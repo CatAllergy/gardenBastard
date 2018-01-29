@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneLoader : MonoBehaviour
+public class SplashScreenScript : MonoBehaviour
 {
 
     // Use this for initialization
@@ -16,7 +16,7 @@ public class SceneLoader : MonoBehaviour
     void Update()
     {
 
-     Invoke("LoadNextScene", 1f);
+     Invoke("LoadNextScene", 5f);
 
     }
     void LoadNextScene()
