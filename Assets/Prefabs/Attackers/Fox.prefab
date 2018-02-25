@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 61326038501927146}
   - component: {fileID: 114198516987690562}
   - component: {fileID: 50148679232264370}
+  - component: {fileID: 114307225952555116}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -67,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1583490020705508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: 2, z: 0}
+  m_LocalPosition: {x: 7, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4096826686790924}
@@ -147,7 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72279de2911fa0d4ba51482b73f690c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 0
 --- !u!114 &114198516987690562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,6 +159,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6461d0d53312f09409759726fdd296ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114307225952555116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1583490020705508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95983db97677d4849b828decb3ae85df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitpoints: 500
 --- !u!212 &212328464192513502
 SpriteRenderer:
   m_ObjectHideFlags: 1
