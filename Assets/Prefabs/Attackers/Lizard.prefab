@@ -36,11 +36,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4670704653898852}
   - component: {fileID: 95745088616905738}
-  - component: {fileID: 114444728120839308}
   - component: {fileID: 61457482478665996}
-  - component: {fileID: 50519650173225764}
-  - component: {fileID: 114838057728284770}
+  - component: {fileID: 50591957536300168}
+  - component: {fileID: 114444728120839308}
   - component: {fileID: 114541924558026866}
+  - component: {fileID: 114593624774419384}
   m_Layer: 0
   m_Name: Lizard
   m_TagString: Untagged
@@ -75,7 +75,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50519650173225764
+--- !u!50 &50591957536300168
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitpoints: 500
---- !u!114 &114838057728284770
+--- !u!114 &114593624774419384
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
