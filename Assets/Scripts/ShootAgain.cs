@@ -19,7 +19,6 @@ public class ShootAgain : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        //creates a parent if necessary to keep the project file tidy
         projectileParent = GameObject.Find("Projectiles");
         if (!projectileParent)
         {
@@ -31,8 +30,8 @@ public class ShootAgain : MonoBehaviour
     private void Update()
     {
         //isAttackerAheadInLand();
-        print(name + laneAttacker);
-        //
+        //print(name + laneAttacker);
+        
         if (isAttackerAheadInLand())
         {
             animator.SetBool("isAttacking", true);
@@ -41,26 +40,29 @@ public class ShootAgain : MonoBehaviour
         {
             animator.SetBool("isAttacking", false);
         }
-        //
+        
+        //print(myLaneSpawner.transform.childCount);
     }
-
+    
     bool isAttackerAheadInLand()
-    {
+    { 
         //Exit if no attackers in lane
-        if(myLaneSpawner.transform.childCount <= 0)
-        {
+        if (myLaneSpawner.transform.childCount <= 0) {
             return false;
         }
-        //if there are attackers, are they ahead?
-        foreach(Transform attacker in myLaneSpawner.transform)
-        {
-            if (attacker.transform.position.x > transform.position.x)
-            {
+
+        // If there are attackers, are they ahead?
+        foreach (Transform attacker in myLaneSpawner.transform) {
+            if (attacker.transform.position.x > transform.position.x) {
+                print(attacker + " is in the lane ahead");
                 return true;
             }
         }
+
+        // Attackers in lane but not ahead
         return false;
     }
+    
 
     //Look through all the lane spawners and set myLaneSpawner if found.
     void setMyLaneSpawner()
@@ -71,6 +73,7 @@ public class ShootAgain : MonoBehaviour
             if (spawner.transform.position.y == transform.position.y)
             {
             myLaneSpawner = spawner;
+            //    print(myLaneSpawner);
             return;
             }
         }

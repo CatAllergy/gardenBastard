@@ -6,9 +6,12 @@ public class DefenderSpawner : MonoBehaviour {
 
 
     public Camera myCamera;
+
+
+    private StarDisplay starDisplay; 
 	// Use this for initialization
 	void Start () {
-		
+        starDisplay = GameObject.FindObjectOfType<StarDisplay>();
 	}
 	
 	// Update is called once per frame
@@ -17,9 +20,20 @@ public class DefenderSpawner : MonoBehaviour {
 	}
     private void OnMouseDown()
     {
-        Vector2 rawPos = CalculateWorldPointOfMouseClick();
-        Vector2 roundedPos = SnapToGrid(rawPos);
-        Instantiate(Button.selectedDefender, roundedPos, Quaternion.identity);
+        GameObject defender = Button.selectedDefender;
+        int defenderCost = defender.GetComponent<Defenders>().starCost;
+        if (starDisplay.UseStars(defenderCost) == StarDisplay.Status.SUCCESS)
+        {
+            Vector2 rawPos = CalculateWorldPointOfMouseClick();
+            Vector2 roundedPos = SnapToGrid(rawPos);
+            Instantiate(Button.selectedDefender, roundedPos, Quaternion.identity);
+            starDisplay.UseStars(defenderCost);
+        }
+        else
+        {
+            Debug.Log("Insufficient stars");
+
+        }
     }
 
     Vector2 SnapToGrid (Vector2 rawWorldPos)
