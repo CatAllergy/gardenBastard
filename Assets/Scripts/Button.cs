@@ -21,7 +21,7 @@ public class Button : MonoBehaviour {
 	}
     private void OnMouseDown()
     {
-        Debug.Log(name + " clicked");
+        //Debug.Log(name + " clicked");
 
         foreach (Button thisButton in buttonArray)
         {

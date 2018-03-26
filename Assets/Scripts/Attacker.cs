@@ -6,6 +6,8 @@ public class Attacker : MonoBehaviour {
 
     [Range(-1f, 1.5f)]
     private float currentSpeed;
+
+    [Tooltip ("Average number of seconds between spawns")] public float seenEverySeconds;
     private GameObject currentTarget;
     private Animator animationControl;
 
